@@ -1,0 +1,22 @@
+# Environments
+.env
+.venv
+env/
+ENV/
+env.bak/
+venv.bak/
+
+#pycharm
+.idea/
+
+#mac
+.DS_Store
+
+#win
+**/__pycache__
+
+#project_out
+Import_Diva/
+Import_Pathfinder/
+Report_Diva/
+Report_Pathfinder/

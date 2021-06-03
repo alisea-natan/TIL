@@ -9,3 +9,6 @@ Today I Learned:
    parameters. 
 
     New script you can find here: Task2.../curl.sh
+
+03.06.2021:
+1) How to add environment variables to project from file .env
