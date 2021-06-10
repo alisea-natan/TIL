@@ -1,0 +1,31 @@
+Application Type: Web, Mobile Native, Hybrid
+Mobile Platform: iOS, Android
+Browser: Chrome, Firefox, Safari, 
+Programming Language: Java, JS, Python, Swift, C#
+Unit Framework: TestNG, JUnit, Mocha, Jest, Jasmine, PyTest, Unittest, Nose2,  
+Web Frameworks: Selenide, Serenity, WebdriverIO, Cypress, CodeceptJS, Puppeteer, Playwrite, Helium,  
+Mobile Frameworks: Appium, Espresso, XCUITest, Detox, Xamarin
+Infrastructure: Selenium Grid, Selenoid
+
+If [Application Type] in {"Mobile Native", "Hybrid"} THEN [Browser] = "";
+
+IF [Mobile Platform] = "Android" THEN [Browser] <> "Safari";
+IF [Mobile Platform] = "iOS" THEN [Browser] <> "Firefox";
+
+IF [Mobile Platform] = "iOS" THEN [Mobile Frameworks] <> "Espresso";
+IF [Mobile Platform] = "Android" THEN [Mobile Frameworks] <> "XCUITest";
+
+
+IF [Mobile Frameworks] = "Espresso" THEN [Programming Language] = "Java";
+IF [Mobile Frameworks] = "Detox" THEN [Programming Language] = "JS";
+IF [Mobile Frameworks] = "Xamarin" THEN [Programming Language] = "C#";
+IF [Mobile Frameworks] = "XCUITest" THEN [Programming Language] = "Swift";
+IF [Programming Language] = "Swift" THEN [Mobile Frameworks] <> "Appium";
+
+IF [Programming Language] = "Java" THEN ([Unit Framework] in {"TestNG", "JUnit"} AND [Web Frameworks] in {"Selenide", "Serenity"});
+IF [Programming Language] = "JS" THEN ([Unit Framework] in {"Mocha", "Jest", "Jasmine"} AND [Web Frameworks] in {"WebdriverIO", "Cypress", "CodeceptJS", "Puppeteer", "Playwrite"});
+IF [Programming Language] = "Python" THEN ([Unit Framework] in {"Pytest", "Unittest", "Nose2"} AND [Web Frameworks] = "Helium");
+IF [Programming Language] = "Swift" THEN ([Unit Framework] = "" AND [Web Frameworks] = "");
+IF [Programming Language] = "C#" THEN ([Unit Framework] = "" AND [Web Frameworks] = "");
+
+If [Application Type] = "Web" THEN [Infrastructure] = "Selenoid";

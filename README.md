@@ -12,3 +12,8 @@ Today I Learned:
 
 03.06.2021:
 1) How to add environment variables to project from file .env
+
+10.06.2021:
+1) More about PICT console app for pairwise testing
+1) More about mobile testing and different frameworks
+1) How to convert table to json using bash jq
