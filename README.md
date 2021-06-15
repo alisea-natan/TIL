@@ -17,3 +17,7 @@ Today I Learned:
 1) More about PICT console app for pairwise testing
 1) More about mobile testing and different frameworks
 1) How to convert table to json using bash jq
+
+15.06.2021:
+1) How to create a console app with click module
+1) How to receive some parameters with click.option
